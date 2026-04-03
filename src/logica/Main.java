@@ -74,7 +74,7 @@ public class Main {
 	                }
 	            }
 	            case 2 -> {
-	                
+	            	
 	            }
 	        }
 
@@ -150,7 +150,7 @@ public class Main {
 				
 				cantRegistros++;
 				
-				fileEdit("Registros.txt");
+				fileEdit("Registros.txt"); System.out.println("Actividad registrada !"); System.out.println();
 				
 				
 				} 
@@ -254,12 +254,18 @@ public class Main {
 			        System.out.println("No tienes actividades registradas.");
 			    } else {
 			        System.out.print("Seleccione el numero de actividad a eliminar (0 para cancelar): ");
+			        
+			        while(!menuU.hasNextInt()) {
+						System.out.println("Error : ingrese un valor valido");
+						menuU.next();
+					}
+			        
 			        int seleccion = menuU.nextInt();
 			        menuU.nextLine();
-
+			        
 			        if (seleccion > 0 && seleccion < contadorOpciones) {
 			            int indiceReal = mapeoIndices[seleccion];
-
+			        
 			            // Logica para eliminar del arreglo
 			            for (int j = indiceReal; j < cantRegistros - 1; j++) {
 			                regUsuarios[j] = regUsuarios[j + 1];
