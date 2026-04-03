@@ -74,7 +74,8 @@ public class Main {
 	                }
 	            }
 	            case 2 -> {
-	            	
+	                // menu analisis
+	            	MenuAnalisis.mostrarMenu(regUsuarios, regFechas, regHoras, regActividades, cantRegistros, listaNombres, cantUsuarios, sc);
 	            }
 	        }
 
